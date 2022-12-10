@@ -3,8 +3,10 @@
 // });
 const app = new PIXI.Application(
     { 
+       //  backgroundColor: "white",
+        backgroundAlpha: 0,
 //          backgroundColor: 0x808080
-        transparent: true
+        // transparent: true
     }
 );
 
@@ -89,8 +91,8 @@ bottle.zIndex = 3;
 bottle.angle = 45;
 truck.addChild(bottle);
 
-var kerzen = PIXI.Texture.fromFrame('kerzen.png');
-var kerzenOhne = PIXI.Texture.fromFrame('kerzen-ohne.png');
+var kerzen = PIXI.Texture.from('kerzen.png');
+var kerzenOhne = PIXI.Texture.from('kerzen-ohne.png');
 const hotdog = PIXI.Sprite.from(kerzen);
 hotdog.anchor.set(0.5, 0.5);
 hotdog.x = 700;
